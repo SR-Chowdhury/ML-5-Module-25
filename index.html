@@ -4,16 +4,78 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>ML5 - Module 25</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
+    <div class="container py-5">
+        <h1 class="text-center">DOM (Document Object Model)</h1>
+        <h2 id="dom-title">What is the DOM?</h2>
+        <p>DOM stands for Document Object Model. It is a programming interface that allows us to create, change, or
+            remove elements from the document. We can also add events to these elements to make our page more dynamic.
+        </p>
+        <p>With the object model, JavaScript gets all the power it needs to create dynamic HTML: <br>
+        <ul class="four-way">
+            <li>JavaScript can change all the HTML elements in the page</li>
+            <li>JavaScript can change all the HTML attributes in the page</li>
+            <li>JavaScript can change all the CSS styles in the page</li>
+            <li>JavaScript can remove existing HTML elements and attributes</li>
+            <li>JavaScript can add new HTML elements and attributes</li>
+            <li>JavaScript can react to all existing HTML events in the page</li>
+            <li>JavaScript can create new HTML events in the page</li>
+        </ul>
+        <p>
+            DOM returns an <strong>array like object: HTML collection</strong> <br>
+            We can get HTML elements by Five differents way.
+        <ol class="five-way 0-example" id="five-way-id">
+            <li>document.getElementsByTagName('tagName')</li>
+            <li id="get-ID">document.getElementById('id');</li>
+            <li>document.getElementsByClassName('class-name');</li>
+            <li>element.getAttribute('class / id')</li>
+            <li>element.setAttribute(attribute, value)</li>
+            <li>document.querySelectorAll('p');</li>
+            <li>document.querySelector('p')
+                <code>N.B. if you use ID than ('#id') or if you use classname than ('.class-name')</code></li>
+            <li><code>N.B. querySelector and querySelectorAll return <strong>NodeList</strong></code></li>
+            <li>element.classList;</li>
+            <li>element.classList.add('className');</li>
+            <li>element.classList.remove('className');</li>
+        </ol>
+        </p>
+        <p class="query-selector">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at deleniti numquam recusandae cum ipsa odio
+            eos pariatur explicabo deserunt doloribus ut fugiat eligendi, quas dolor, harum nesciunt vero aliquid!
+        </p>
+
+        <h2>The Difference Between an HTMLCollection and a NodeList </h2>
+        <table class="table-bordered">
+            <thead>
+                <th>HTML Collection </th>
+                <th>NodeList</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>An HTMLCollection is a collection of document elements.</td>
+                    <td>A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).</td>
+                </tr>
+                <tr>
+                    <td>HTMLCollection items can be accessed by their name, id, or index number.</td>
+                    <td>NodeList items can only be accessed by their index number.</td>
+                </tr>
+                <tr>
+                    <td>An HTMLCollection is always a live collection. Example: If you add a element to a list in the DOM, the list in the HTMLCollection will also change.</td>
+                    <td>A NodeList is most often a static collection. Example: If you add a element to a list in the DOM, the list in NodeList will not change.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="./custom.js"></script>
 </body>
 
 </html>
